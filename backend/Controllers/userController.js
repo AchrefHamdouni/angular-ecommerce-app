@@ -115,6 +115,7 @@ async function updateUser(req, res) {
       state,
       zip_code,
       country,
+      role
     } = req.body;
 
     // Check if user exists
@@ -132,6 +133,7 @@ async function updateUser(req, res) {
     user.state = state || user.state;
     user.zip_code = zip_code || user.zip_code;
     user.country = country || user.country;
+    user.role = role || user.role;
 
     // Check if password needs to be updated
     if (password) {
